@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="website-theme-white" lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %}{{ 'welcome'|trans }}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ useMinified is same as(true) ? '/fonts/OpenSans.min.css' : '/fonts/OpenSans.css' }}">
+        <link rel="stylesheet" href="{{ useMinified is same as(true) ? '/css/app.min.css' : '/css/app.css' }}">
+        <link rel="stylesheet" href="{{ useMinified is same as(true) ? '/css/theme-white.min.css' : '/css/theme-white.css' }}">
+        <link rel="stylesheet" href="{{ useMinified is same as(true) ? '/css/theme-black.min.css' : '/css/theme-black.css' }}">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <script>
+            const searchIndex = {{ searchIndex|raw }};
+        </script>
+    </head>
+    <body>
+        <div class="theme-switch">
+            <span class="theme-switch-button js-theme-white">{{ 'theme_white'|trans }}</span>
+            |
+            <span class="theme-switch-button js-theme-black">{{ 'theme_black'|trans }}</span>
+        </div>
+        <div class="logo">
+            <a href="/">Mystic Lyrics</a>
+        </div>
+        <div>
+            <form class="search-form">
+                <div>
+                    <label>
+                        <input type="text" placeholder="{{ 'look_up_prompt'|trans }}" class="js-search-form-search-field">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="submit" value="{{ 'look_up'|trans }}" class="js-search-submit">
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="content-wrapper">
+            {% block body %}{% endblock %}
+        </div>
+        <script src="{{ useMinified is same as(true) ? '/js/app.min.js' : '/js/app.js' }}"></script>
+    </body>
+</html>

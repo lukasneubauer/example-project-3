@@ -1,0 +1,12 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: false
+        public: false
+
+    App\Commands\GenerateStaticWebsiteCommand:
+        arguments:
+            $projectDirectory: '%kernel.project_dir%'
+        tags:
+            - { name: 'console.command' }

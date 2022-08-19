@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cd "$(dirname "$(command -v "$0")")" || exit 1
+
+root_dir="$(realpath "$PWD/..")"
+
+cd "$root_dir" || exit 1
+
+node node_modules/.bin/cleancss -d -o public/css/app.min.css public/css/app.css
+node node_modules/.bin/cleancss -d -o public/css/theme-white.min.css public/css/theme-white.css
+node node_modules/.bin/cleancss -d -o public/css/theme-black.min.css public/css/theme-black.css
+node node_modules/.bin/cleancss -d -o public/fonts/OpenSans.min.css public/fonts/OpenSans.css

@@ -1,0 +1,6 @@
+welcome: 'Vítejte!'
+welcome_prompt: 'Vyberte si prosím z textů písniček níže.'
+look_up: 'Hledat'
+look_up_prompt: 'Zadejte hledaný výraz...'
+theme_white: 'Denní vzhled'
+theme_black: 'Noční vzhled'

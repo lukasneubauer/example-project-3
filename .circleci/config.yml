@@ -1,0 +1,70 @@
+version: 2
+
+jobs:
+    build:
+        docker:
+            - image: cimg/base:stable
+              auth:
+                  username: $DOCKER_HUB_USERNAME
+                  password: $DOCKER_HUB_PASSWORD
+        environment:
+            APP_ENV: test
+            APP_DEBUG: 1
+            APP_SECRET: ThisTokenIsNotSoSecretChangeIt
+            WWW_DATA_UID: 3434
+            WWW_DATA_GID: 3434
+            ENABLE_XDEBUG: 0
+            COMPOSE_PROJECT_NAME: web
+            COMPOSE_FILE: docker/config/nginx.yml:docker/config/php.yml
+        steps:
+            - checkout
+            - run:
+                name: Install Docker Compose
+                environment:
+                    COMPOSE_VERSION: 1.29.2
+                    COMPOSE_BIN: /usr/local/bin/docker-compose
+                command: |
+                    sudo curl -fsLS "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o "$COMPOSE_BIN"
+                    sudo chmod 0775 "$COMPOSE_BIN"
+            - setup_remote_docker:
+                version: 20.10.14
+                docker_layer_caching: true
+            - run: docker-compose build
+            - run: docker-compose up -d
+            - restore_cache:
+                key: composer-cache-{{ checksum "composer.lock" }}
+            - run: test -d vendor && docker cp vendor web-php:/var/www/html/vendor || true
+            - run: docker-compose exec php composer --ansi install --no-interaction
+            - run: docker cp web-php:/var/www/html/vendor vendor
+            - save_cache:
+                key: composer-cache-{{ checksum "composer.lock" }}
+                paths:
+                    - vendor
+            - run: docker-compose exec php php bin/console --ansi lint:container -v
+            - run: docker-compose exec php php bin/console --ansi lint:twig templates -v
+            - run: docker-compose exec php php bin/console --ansi lint:yaml config -v
+            - run: docker-compose exec php php bin/console --ansi lint:yaml translations -v
+            - run: docker-compose exec php php vendor/bin/parallel-lint --colors src tests
+            - run: docker-compose exec php php vendor/bin/php-cs-fixer --ansi fix -v --diff --show-progress dots --dry-run
+            - run: docker-compose exec php php vendor/bin/phpmd src,tests text unusedcode
+            - run: docker-compose exec php php vendor/bin/phpstan --ansi analyse --level 9 --configuration phpstan.neon --memory-limit 512M src tests
+            - run: docker-compose exec php php vendor/bin/phpunit --colors=always --log-junit=test-results/phpunit/results.xml
+            - restore_cache:
+                key: npm-cache-{{ checksum "package-lock.json" }}
+            - run: test -d node_modules && docker cp node_modules web-php:/var/www/html/node_modules || true
+            - run: docker-compose exec php npm ci
+            - run: docker cp web-php:/var/www/html/node_modules node_modules
+            - save_cache:
+                key: npm-cache-{{ checksum "package-lock.json" }}
+                paths:
+                    - node_modules
+            - run:
+                command: docker cp web-php:/var/www/html/var/log logs
+                when: always
+            - run:
+                command: docker cp web-php:/var/www/html/test-results test-results
+                when: always
+            - store_artifacts:
+                path: logs
+            - store_test_results:
+                path: test-results

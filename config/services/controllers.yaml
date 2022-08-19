@@ -1,0 +1,16 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: false
+        public: false
+
+    App\Controllers\HomeController:
+        arguments:
+            $environment: '%kernel.environment%'
+        tags: ['controller.service_arguments']
+
+    App\Controllers\SongController:
+        arguments:
+            $environment: '%kernel.environment%'
+        tags: ['controller.service_arguments']

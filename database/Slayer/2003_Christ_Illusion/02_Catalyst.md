@@ -1,0 +1,111 @@
+Attitude is my addiction
+
+I live life with no regret
+
+Unlike it's my conviction
+
+That sets me apart from the rest
+
+<br>
+
+I live for competition
+
+Your cynicism only makes my stronger
+
+I am the culmination
+
+Setting the Standard that all will follow
+
+<br>
+
+I live it every day
+
+Don't know another way
+
+<br>
+
+Within my eyes there is devastation an fury
+
+You can't understand
+
+In my fight
+
+Win by attrition I bring it with that I fucking am
+
+<br>
+
+You never dealt with such rejection
+
+Licking your wounds that won't fucking heal
+
+You've never seen so much aggression
+
+I am the scream to your fucking silence
+
+<br>
+
+I live it every day
+
+Don't know another way
+
+<br>
+
+Attitude is my addiction
+
+I live life with no regret
+
+Unlike you it's my affliction
+
+That creates the template of all that I am
+
+<br>
+
+You know I know
+
+No matter what you say
+
+You'll be beaten today
+
+Like every other day
+
+<br>
+
+Something about you
+
+Keeps you from letting go
+
+Of lame obsessions
+
+Built up inside you
+
+Forget the guesswork
+
+You're starting at the source
+
+Gazing into my eyes
+
+You'll see there's no remorse
+
+'cause this is my war
+
+All day and every day
+
+It's all about the conflict
+
+Yeah!
+
+<br>
+
+Bring on the competition
+
+Your pessimism only makes my stronger
+
+I am the culmination
+
+The fucking Standard that all will follow
+
+<br>
+
+I live it every day
+
+Don't know another way

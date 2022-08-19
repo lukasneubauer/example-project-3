@@ -1,0 +1,18 @@
+#!/bin/sh
+
+cd "$(dirname "$(command -v "$0")")" || exit 1
+
+root_dir="$(realpath "$PWD/..")"
+
+cd "$root_dir" || exit 1
+
+find out -mindepth 1 -maxdepth 1 -type d -exec rm -fr '{}' +
+
+bin/min_css
+bin/min_js
+
+bin/console app:generate-static-website
+
+cp -fr public/css out
+cp -fr public/fonts out
+cp -fr public/js out

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ band }} - {{ song }}{% endblock %}
+
+{% block body %}
+
+    <h1>{{ band }} - {{ song }}</h1>
+
+    <h2>{{ disc }}</h2>
+
+    <div class="js-song-text">
+
+        {{ text|markdown_to_html }}
+
+    </div>
+
+{% endblock %}

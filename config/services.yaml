@@ -1,0 +1,16 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: false
+        public: false
+
+    App\:
+        resource: '%kernel.project_dir%/src/*'
+        exclude: '%kernel.project_dir%/src/{Commands,Controllers,Database,Entities,Exceptions,Renderers,Kernel.php}'
+
+imports:
+    - { resource: services/commands.yaml }
+    - { resource: services/controllers.yaml }
+    - { resource: services/database.yaml }
+    - { resource: services/renderers.yaml }

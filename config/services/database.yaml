@@ -1,0 +1,13 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: false
+        public: false
+
+    App\Database\:
+        resource: '%kernel.project_dir%/src/Database/*'
+
+    App\Database\Configuration:
+        arguments:
+            $path: '%database_dir%'

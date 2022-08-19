@@ -1,0 +1,14 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: false
+        public: false
+
+    App\Renderers\HomeRenderer:
+        arguments:
+            $template: 'Home/index.html.twig'
+
+    App\Renderers\SongRenderer:
+        arguments:
+            $template: 'Song/index.html.twig'

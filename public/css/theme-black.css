@@ -1,0 +1,29 @@
+html.website-theme-black {
+    background-color: #333;
+    color: #fff;
+}
+
+html.website-theme-black .search-form input[type="text"] {
+    background-color: #333;
+    border-color: #fff;
+    color: #fff;
+}
+
+html.website-theme-black .search-form input[type="text"]:focus,
+html.website-theme-black .search-form input[type="text"]:hover {
+    border-color: #fff;
+}
+
+html.website-theme-black .search-form input[type="submit"] {
+    background-color: #fff;
+    color: #333;
+}
+
+html.website-theme-black .search-form input[type="submit"]:focus,
+html.website-theme-black .search-form input[type="submit"]:hover {
+    background-color: #fff;
+}
+
+html.website-theme-black .highlighting {
+    text-decoration-color: #f66;
+}

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+    php:
+        build:
+            context: ../..
+            dockerfile: docker/images/php/Dockerfile
+            args:
+                APP_ENV: "${APP_ENV}"
+                APP_DEBUG: "${APP_DEBUG}"
+                APP_SECRET: "${APP_SECRET}"
+                WWW_DATA_UID: "${WWW_DATA_UID}"
+                WWW_DATA_GID: "${WWW_DATA_GID}"
+                ENABLE_XDEBUG: "${ENABLE_XDEBUG}"
+        container_name: web-php

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+cd "$(dirname "$(command -v "$0")")" || exit 1
+
+root_dir="$(realpath "$PWD/..")"
+
+cd "$root_dir" || exit 1
+
+eval "$(docker_bin/print_vars)"
+
+docker_bin/check_conf || exit 1
+
+if echo "$APP_ENV" | grep -q '^prod' ; then
+    docker-compose exec php composer install --no-dev
+else
+    docker-compose exec php composer install --optimize-autoloader --apcu-autoloader
+    docker-compose exec php npm ci
+fi

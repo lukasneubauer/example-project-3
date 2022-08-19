@@ -1,0 +1,54 @@
+build:
+    image:
+        name: docker/compose:1.29.2
+    services:
+        - docker:dind
+    variables:
+        APP_ENV: 'test'
+        APP_DEBUG: '1'
+        APP_SECRET: 'ThisTokenIsNotSoSecretChangeIt'
+        WWW_DATA_UID: '1001'
+        WWW_DATA_GID: '1001'
+        ENABLE_XDEBUG: '0'
+        COMPOSE_PROJECT_NAME: 'web'
+        COMPOSE_FILE: 'docker/config/nginx.yml:docker/config/php.yml'
+        DOCKER_HOST: 'tcp://docker:2375'
+        DOCKER_DRIVER: 'overlay2'
+        DOCKER_TLS_CERTDIR: ''
+    cache:
+        - key:
+            files:
+                - composer.lock
+          paths:
+              - vendor
+        - key:
+            files:
+                - package-lock.json
+          paths:
+              - node_modules
+    script:
+        - docker-compose build
+        - docker-compose up -d
+        - test -d vendor && docker cp vendor web-php:/var/www/html/vendor || true
+        - test -d node_modules && docker cp node_modules web-php:/var/www/html/node_modules || true
+        - docker-compose exec -T -u root:root php composer --ansi install --no-interaction
+        - docker-compose exec -T -u root:root php php bin/console --ansi lint:container -v
+        - docker-compose exec -T -u root:root php php bin/console --ansi lint:twig templates -v
+        - docker-compose exec -T -u root:root php php bin/console --ansi lint:yaml config -v
+        - docker-compose exec -T -u root:root php php bin/console --ansi lint:yaml translations -v
+        - docker-compose exec -T -u root:root php php vendor/bin/parallel-lint --colors src tests
+        - docker-compose exec -T -u root:root php php vendor/bin/php-cs-fixer --ansi fix -v --diff --show-progress dots --dry-run
+        - docker-compose exec -T -u root:root php php vendor/bin/phpmd src,tests text unusedcode
+        - docker-compose exec -T -u root:root php php vendor/bin/phpstan --ansi analyse --level 9 --configuration phpstan.neon --memory-limit 512M src tests
+        - docker-compose exec -T -u root:root php php vendor/bin/phpunit --colors=always --log-junit=phpunit-results.xml
+        - docker-compose exec -T -u root:root php npm ci
+        - docker cp web-php:/var/www/html/vendor vendor
+        - docker cp web-php:/var/www/html/node_modules node_modules
+        - docker cp web-php:/var/www/html/var/log logs
+        - docker cp web-php:/var/www/html/phpunit-results.xml phpunit-results.xml
+    artifacts:
+        paths:
+            - logs
+        reports:
+            junit:
+                - phpunit-results.xml

@@ -1,0 +1,131 @@
+A soldier's heart
+
+Reflecting back at me
+
+I keep seeing mutilated faces
+
+Even in my dreams
+
+Distorted images
+
+Flashing rapidly
+
+Psychotically abusing me
+
+Devouring my brain
+
+<br>
+
+The eyes of the insane
+
+On a demented campaign
+
+<br>
+
+Tortured spirits
+
+Will not let me rest
+
+These thoughts of mutilated faces
+
+Completely possessed
+
+Fragmented images
+
+Flashing rapidly
+
+Psychotically abusing me
+
+Whirling through my head
+
+<br>
+
+Shellshocked
+
+Battle fatigue
+
+Overwhelming anxiety
+
+Flashbacks
+
+Panic attacks
+
+Death raising it's ugly face at me!
+
+<br>
+
+Got to make it stop
+
+Can't take it any more
+
+They're all dead
+
+Keep haunting me
+
+They just keep coming back for more!
+
+<br>
+
+The eyes of the insane
+
+On a demented campaign
+
+Flashbacks
+
+Panic attacks
+
+Death raising it's ugly face at me!
+
+<br>
+
+Got to make it stop
+
+Can't take it any more!
+
+Death's face keeps haunting me
+
+And just keeps coming back for more!
+
+<br>
+
+Got to make it stop
+
+Can't take it any more!
+
+Death's face keeps haunting me
+
+And just keeps coming back for more!
+
+<br>
+
+A soldier
+
+Of misfortune
+
+I owe my pain and suffering
+
+To this hell
+
+These demons
+
+Ripping through my soul
+
+Evil's relentless hostility
+
+Won't let me sleep
+
+<br>
+
+Shellshocked
+
+Battle fatigue
+
+Devastating insanity
+
+Flashbacks
+
+Panic attacks
+
+Death's rotting
+
+He's coming for me!!

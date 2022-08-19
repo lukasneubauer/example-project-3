@@ -1,0 +1,22 @@
+imports:
+    - { resource: config_dev.yaml }
+
+framework:
+    test: ~
+    profiler:
+        collect: false
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: false
+        public: false
+
+    App\Database\Configuration:
+        arguments:
+            $path: '%kernel.project_dir%/tests/db'

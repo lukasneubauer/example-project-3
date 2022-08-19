@@ -1,0 +1,30 @@
+imports:
+    - { resource: services.yaml }
+
+parameters:
+    locale: 'cs_CZ'
+    database_dir: '%kernel.project_dir%/database'
+
+framework:
+    translator:
+        paths:
+            - '%kernel.project_dir%/translations'
+        fallbacks:
+            - '%locale%'
+    enabled_locales: ['%locale%']
+    secret: '%env(APP_SECRET)%'
+    router:
+        resource: '%kernel.project_dir%/config/routing.yaml'
+        strict_requirements: ~
+        utf8: true
+    default_locale: '%locale%'
+    trusted_hosts: ~
+    fragments: ~
+    http_method_override: true
+    php_errors:
+        log: true
+
+twig:
+    paths: ['%kernel.project_dir%/templates']
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'

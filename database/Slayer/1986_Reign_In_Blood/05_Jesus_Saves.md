@@ -1,0 +1,57 @@
+You go to the church, you kiss the cross
+
+You will be saved at any cost
+
+You have your own reality
+
+Christianity
+
+You spend your life just kissing ass
+
+A trait that's grown as time has passed
+
+You think the world will end today
+
+You praise the Lord, it's all you say
+
+<br>
+
+Jesus saves, listen to you pray
+
+You think you'll see the pearly gates
+
+When death takes you away
+
+<br>
+
+For all respect you cannot lust
+
+In an invisible man you place your trust
+
+Indirect dependency
+
+Eternal attempt at amnesty
+
+He will decide who lives and dies
+
+Depopulate Satanas rise
+
+You will be an accessory
+
+Irreverence and blasphemy
+
+<br>
+
+Jesus saves, no need to pray
+
+The gates of pearl have turned to gold
+
+It seems you've lost your way
+
+<br>
+
+Jesus saves, no words of praise
+
+No promised land to take you to
+
+There is no other way

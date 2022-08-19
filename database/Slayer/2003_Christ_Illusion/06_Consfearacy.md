@@ -1,0 +1,99 @@
+I need to redefine
+
+All the things I hate today
+
+Politics that fail
+
+From a president derailed
+
+I hate the shit economy
+
+It might as well be sodomy
+
+I know that in the end
+
+I'm expected to pretend
+
+<br>
+
+But I can't relate
+
+To your verbal idiocy
+
+No one's in control
+
+When the government's the enemy
+
+<br>
+
+So light the fuse
+
+Impose your views
+
+Consfearacy
+
+Is anarchy
+
+<br>
+
+Actions of hostility
+
+Breeds conformity
+
+Annihilation will begin
+
+Extermination from within
+
+<br>
+
+So light the fuse
+
+Impose your views
+
+Consfearacy
+
+Is anarchy
+
+<br>
+
+I need to redefine
+
+How I see the world today
+
+Seems that all the war
+
+Didn't even up the score
+
+It's only mind pollution
+
+There is no resolution
+
+Still I know that in the end
+
+I'm expected to pretend
+
+That I can Think of myself
+
+Blame it all on someone else
+
+Half-hearted smile
+
+While you look the other way
+
+I can't relate
+
+To your verbal idiocy
+
+No one's in control
+
+When the government's the enemy
+
+<br>
+
+So light the fuse
+
+Impose your views
+
+Consfearacy
+
+Is anarchy

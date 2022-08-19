@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="search-results-wrapper"></div>
+
+    <div class="home-page-wrapper">
+
+        <p class="welcome-prompt">{{ 'welcome_prompt'|trans }}</p>
+
+        {% for band in bands %}
+
+            <h2>{{ band.name }}</h2>
+
+            {% for disc in band.discs %}
+
+                <h3>{{ disc.name }}</h3>
+
+                <div class="songs-list">
+
+                    {% for song in disc.songs %}
+
+                        <p><a href="{{ path('song', {band: band.path, disc: disc.path, song: song.path}) }}">{{ song.name }}</a></p>
+
+                    {% endfor %}
+
+                </div>
+
+            {% endfor %}
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
